@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lotte Sweet Mall</title>
+    <link rel="stylesheet" href="css/category.css" />
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/category.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="topMenu">
+          <ul>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="login.html">로그인</a></li>
+            <li>
+              <a href="#"
+                >롯데마트몰<img src="images/top_menu.png" alt="martmall"
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <!--topMenu-->
+      </header>
+      <div class="topScroll">
+        <div class="top">
+          <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="logo" /></a>
+          </div>
+          <div class="search">
+            <input
+              type="search"
+              placeholder="검색어를 입력해주세요"
+              autofocus
+            />
+            <img src="images/search.png" alt="search" />
+          </div>
+          <div class="page">
+            <ul>
+              <li>
+                <a href="#"><img src="images/mypage.png" alt="mypage" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/hope.png" alt="hope" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/cart.png" alt="cart" /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--top-->
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="category.html"
+                ><img src="images/category.png" alt="category" />카테고리</a
+              >
+              <ul class="sub">
+                <li>스낵</li>
+                <li>초콜릿</li>
+                <li>캔디/젤리</li>
+                <li>비스켓</li>
+                <li>시리얼</li>
+                <li>아이스크림</li>
+                <li>베이커리</li>
+                <li>선물세트</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">신상품</a>
+              <ul class="sub"></ul>
+            </li>
+            <li>
+              <a href="#">베스트</a>
+              <ul class="sub"></ul>
+            </li>
+            <li>
+              <a href="#">지금특가</a>
+              <ul class="sub"></ul>
+            </li>
+            <li>
+              <a href="#">이벤트/기획전</a>
+              <ul class="sub">
+                <li>이벤트</li>
+                <li>기획전</li>
+                <li>구독서비스</li>
+                <li>대량구매</li>
+                <li>선물하기</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">테마관</a>
+              <ul class="sub">
+                <li>브랜드관</li>
+                <li>캐릭터관</li>
+                <li>스위트tv</li>
+                <li>꿀조합레시피</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">상품추천</a>
+              <ul class="sub">
+                <li>Q.어떤 맛을<br />좋아하세요?</li>
+                <li><img src="images/icon_menu.png" alt="recom" /></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">고객센터</a>
+              <ul class="sub">
+                <li>고객센터</li>
+                <li>배송안내</li>
+                <li>Q&A</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!--menu-->
+      </div>
+      <!-- topScroll -->
+      <nav>
+        <div class="left">
+          <p>카테고리</p>
+          <ul>
+            <li>
+              <a href="#">스낵</a>
+              <img
+                src="images/category_menu.png"
+                alt="cateMenu"
+                class="arrow"
+              />
+              <ul class="cateSub">
+                <li>빼빼로</li>
+                <li>에어베이크드</li>
+                <li>꼬깔콘</li>
+                <li>치토스</li>
+                <li>오잉</li>
+                <li>쌀로별</li>
+                <li>도리토스스</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">초콜릿</a>
+              <img
+                src="images/category_menu.png"
+                alt="cateMenu"
+                class="arrow"
+              />
+              <ul class="cateSub">
+                <li>가나</li>
+                <li>크런키</li>
+                <li>드림카카오</li>
+                <li>ABC초콜릿</li>
+                <li>빈츠</li>
+                <li>길리안</li>
+                <li>허쉬</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">캔디/젤리</a>
+              <img
+                src="images/category_menu.png"
+                alt="cateMenu"
+                class="arrow"
+              />
+              <ul class="cateSub">
+                <li>말랑카우</li>
+                <li>롤리팝</li>
+                <li>청포도캔디</li>
+                <li>목캔디</li>
+                <li>젤리셔스</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">비스킷</a>
+              <img
+                src="images/category_menu.png"
+                alt="cateMenu"
+                class="arrow"
+              />
+              <ul class="cateSub">
+                <li>마가렛트</li>
+                <li>드저뜨와</li>
+                <li>칸쵸/씨리얼</li>
+                <li>칙촉</li>
+                <li>빠다코코낫</li>
+                <li>롯데샌드</li>
+                <li>엄마손파이</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">시리얼</a>
+              <img
+                src="images/category_menu.png"
+                alt="cateMenu"
+                class="arrow"
+              />
+              <ul class="cateSub">
+                <li>퀘이커</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">아이스크림</a>
+              <img
+                src="images/category_menu.png"
+                alt="cateMenu"
+                class="arrow"
+              />
+              <ul class="cateSub">
+                <li>나뚜루</li>
+                <li>바류</li>
+                <li>콘류</li>
+                <li>아이스과자</li>
+                <li>컵류</li>
+                <li>구슬아이스크림</li>
+              </ul>
+            </li>
+            <li><a href="#">베이커리</a></li>
+            <li><a href="#">선물세트</a></li>
+          </ul>
+          <div class="menuCopy">
+            <img src="images/menu_banner.png" alt="menuCopy" />
+          </div>
+        </div>
+        <div class="right">
+          <p>홈 > 카테고리 > <span>스낵</span></p>
+          <div><img src="images/category_banner.png" alt="cateBan" /></div>
+          <div class="brand">
+            <p>인기 브랜드</p>
+            <div class="brandList">
+              <ul>
+                <li><img src="images/brand1.png" alt="brand1" /></li>
+                <li><img src="images/brand2.png" alt="brand2" /></li>
+                <li><img src="images/brand3.png" alt="brand3" /></li>
+                <li><img src="images/brand4.png" alt="brand4" /></li>
+                <li><img src="images/brand5.png" alt="brand5" /></li>
+                <li><img src="images/brand6.png" alt="brand6" /></li>
+                <li><img src="images/brand7.png" alt="brand7" /></li>
+                <li><img src="images/brand8.png" alt="brand8" /></li>
+                <li><img src="images/brand9.png" alt="brand9" /></li>
+                <li><img src="images/brand10.png" alt="brand10" /></li>
+              </ul>
+            </div>
+          </div>
+          <div class="allProd">
+            <p>전체 상품</p>
+            <div class="btn">
+              <div class="filter">
+                <button>필터 열기</button>
+                <ul>
+                  <li>
+                    <ul class="check">
+                      <p>맛</p>
+                      <li>달콤한 맛</li>
+                      <li>고소한 맛</li>
+                      <li>상쾌한 맛</li>
+                      <li>담백한 맛</li>
+                      <li>매콤한 맛</li>
+                      <li>상큼한 맛</li>
+                      <li>기타</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul class="check">
+                      <p>원료</p>
+                      <li>곡물</li>
+                      <li>초콜릿</li>
+                      <li>과일</li>
+                      <li>크림</li>
+                      <li>치즈</li>
+                      <li>껌</li>
+                      <li>기타</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <ul class="check">
+                      <p>식감</p>
+                      <li>딱딱함</li>
+                      <li>쫀득함</li>
+                      <li>부드러움</li>
+                      <li>바삭함</li>
+                      <li>말랑함</li>
+                      <li>퍽퍽함</li>
+                      <li>톡터짐</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="num">
+                <select name="order">
+                  <option value="new">신상품순</option>
+                  <option value="recom">추천순</option>
+                  <option value="number">판매량순</option>
+                  <option value="sale">혜택순</option>
+                  <option value="low">낮은 가격순</option>
+                  <option value="high">높은 가격순</option>
+                </select>
+              </div>
+            </div>
+            <!--btn-->
+          </div>
+          <!--allProd-->
+          <div class="prodSample">
+            <ul class="box">
+              <li>
+                <ul class="sample">
+                  <li>
+                    <a href="#"><img src="images/menu1.png" alt="menu1" /></a>
+                  </li>
+                  <li><a href="#">냠냠연구소 에그하우스 만들기 791g</a></li>
+                  <li>#쿠키</li>
+                  <li>
+                    16,960원 <span class="salePrice">21,200원</span
+                    ><span class="salePersent">20%</span>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/saleCart.png" alt="saleCart"
+                    /></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="sample">
+                  <li>
+                    <a href="#"><img src="images/menu2.png" alt="menu2" /></a>
+                  </li>
+                  <li><a href="#">[무배] 어린이날 과자 세트</a></li>
+                  <li>#어린이날</li>
+                  <li>
+                    9,900원 <span class="salePrice">10,570원</span
+                    ><span class="salePersent">6%</span>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/saleCart.png" alt="saleCart"
+                    /></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="sample">
+                  <li>
+                    <a href="#"><img src="images/menu3.png" alt="menu3" /></a>
+                  </li>
+                  <li><a href="#">[무배] 가정의달 과자 세트</a></li>
+                  <li>#가정의달 #치킨맛</li>
+                  <li>
+                    9,900원 <span class="salePrice">10,570원</span
+                    ><span class="salePersent">6%</span>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/saleCart.png" alt="saleCart"
+                    /></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!-- box -->
+            <ul class="box">
+              <li>
+                <ul class="sample">
+                  <li>
+                    <a href="#"><img src="images/menu4.png" alt="menu4" /></a>
+                  </li>
+                  <li><a href="#">롯샌 제주녹차 벌크 302g</a></li>
+                  <li>#쿠키 #비스킷 #샌드 #달콤한맛 #롯데샌드</li>
+                  <li>
+                    4,000원 <span class="salePrice">5,000원</span
+                    ><span class="salePersent">20%</span>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/saleCart.png" alt="saleCart"
+                    /></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="sample">
+                  <li>
+                    <a href="#"><img src="images/menu5.png" alt="menu5" /></a>
+                  </li>
+                  <li><a href="#">몽쉘 카카오 6입 204G (리뉴얼)</a></li>
+                  <li>#파이 #달콤한맛 #몽쉘 #생크림</li>
+                  <li>
+                    2,640원 <span class="salePrice">3,300원</span
+                    ><span class="salePersent">20%</span>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/saleCart.png" alt="saleCart"
+                    /></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="sample">
+                  <li>
+                    <a href="#"><img src="images/menu6.png" alt="menu6" /></a>
+                  </li>
+                  <li><a href="#">몽쉘 오리지널 6입 204G (리뉴얼)</a></li>
+                  <li>#파이 #달콤한맛 #몽쉘 #생크림</li>
+                  <li>
+                    2,640원 <span class="salePrice">3,300원</span
+                    ><span class="salePersent">20%</span>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/saleCart.png" alt="saleCart"
+                    /></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!-- box -->
+            <ul class="box">
+              <li>
+                <ul class="sample">
+                  <li>
+                    <a href="#"><img src="images/menu7.png" alt="menu7" /></a>
+                  </li>
+                  <li><a href="#">몽쉘 카카오 12입 408G (리뉴얼)</a></li>
+                  <li>#파이 #달콤한맛 #몽쉘 #생크림</li>
+                  <li>
+                    5,200원 <span class="salePrice">6,600원</span
+                    ><span class="salePersent">20%</span>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/saleCart.png" alt="saleCart"
+                    /></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="sample">
+                  <li>
+                    <a href="#"><img src="images/menu8.png" alt="menu8" /></a>
+                  </li>
+                  <li><a href="#">몽쉘 카카오 12입 408G (리뉴얼)</a></li>
+                  <li>#파이 #달콤한맛 #몽쉘 #생크림</li>
+                  <li>
+                    5,200원 <span class="salePrice">6,600원</span
+                    ><span class="salePersent">20%</span>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/saleCart.png" alt="saleCart"
+                    /></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="sample">
+                  <li>
+                    <a href="#"><img src="images/menu9.png" alt="menu9" /></a>
+                  </li>
+                  <li>
+                    <a href="#">롯데초코파이 오리지널 12입 408G (리뉴얼)</a>
+                  </li>
+                  <li>#파이 #달콤한맛 #초코파이 #초코</li>
+                  <li>
+                    4,320원 <span class="salePrice">5,400원</span
+                    ><span class="salePersent">20%</span>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/saleCart.png" alt="saleCart"
+                    /></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!-- box -->
+            <ul class="box">
+              <li>
+                <ul class="sample">
+                  <li>
+                    <a href="#"><img src="images/menu10.png" alt="menu10" /></a>
+                  </li>
+                  <li><a href="#">롯데웰푸드세트</a></li>
+                  <li>#선물세트 #고소한맛</li>
+                  <li>
+                    14,500원 <span class="salePrice">16,170원</span
+                    ><span class="salePersent">10%</span>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/saleCart.png" alt="saleCart"
+                    /></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="sample">
+                  <li>
+                    <a href="#"><img src="images/menu11.png" alt="menu11" /></a>
+                  </li>
+                  <li><a href="#">미세먼지 대비하기 세트</a></li>
+                  <li>#선물세트</li>
+                  <li>
+                    25,900원 <span class="salePrice">26,850원</span
+                    ><span class="salePersent">4%</span>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/saleCart.png" alt="saleCart"
+                    /></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="sample">
+                  <li>
+                    <a href="#"><img src="images/menu12.png" alt="menu12" /></a>
+                  </li>
+                  <li>
+                    <a href="#">칼칼한 날 목캔디 세트</a>
+                  </li>
+                  <li>#선물세트 #캔디</li>
+                  <li>
+                    25,000원 <span class="salePrice">25,550원</span
+                    ><span class="salePersent">2%</span>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><img src="images/saleCart.png" alt="saleCart"
+                    /></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!-- box -->
+          </div>
+          <div class="btn2">
+            <ul>
+              <li><img src="images/button_arrow.png" alt="btn_arrow" /></li>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li><img src="images/button_arrow.png" alt="btn_arrow" /></li>
+            </ul>
+          </div>
+        </div>
+        <!--right-->
+      </nav>
+      <footer>
+        <div class="footMenu">
+          <div class="footList">
+            <ul class="left">
+              <li><a href="#">회사소개</a></li>
+              <li><a href="#">이용약관</a></li>
+              <li><a href="#">개인정보 처리방침</a></li>
+            </ul>
+            <ul class="right">
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">비회원 문의</a></li>
+              <li><a href="#">문의사항</a></li>
+              <li><a href="#">FAMILY SITE</a></li>
+            </ul>
+          </div>
+          <!-- footList -->
+          <div class="footUnder">
+            <div class="text">
+              <ul>
+                <li class="bold">
+                  롯데 스위트몰의 모든 콘텐츠는 저작권 보호를 받고 있습니다.
+                </li>
+                <li class="light">
+                  <ul>
+                    <li>
+                      롯데제과 (주)
+                      <span
+                        >주소 : 서울특별시 영등포구 양평로21길 10 (양평동가)
+                        롯데제과</span
+                      >
+                      <span
+                        >대표번호 : 1522-0071 평일 : 10:00 - 17:00 (주말,공휴일
+                        휴무)</span
+                      >
+                    </li>
+                    <li>
+                      사업자등록번호 : 186-81-00924
+                      <span>통신판매업 신고번호 : 2017-서울영등포-1471호</span>
+                    </li>
+                    <li>개인정보관리 책임자 : 김종기</li>
+                  </ul>
+                </li>
+                <li class="bold">KCP 구매안전서비스</li>
+                <li class="light">
+                  고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서
+                  가입한 구매안전 (에스크로) 서비스를 이용하실 수 있습니다.
+                </li>
+                <li class="light">
+                  Copyright LOTTE CONFECTIONERY Co.LTD.ALL rights reserved.
+                </li>
+              </ul>
+            </div>
+            <!-- text -->
+            <div class="sns">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img src="images/facebook.png" alt="facebook"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/naver.png" alt="naver" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/youtube.png" alt="youtube" /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/instagram.png" alt="instagram"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- wrap -->
+  </body>
+</html>

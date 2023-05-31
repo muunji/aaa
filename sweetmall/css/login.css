@@ -1,0 +1,486 @@
+@charset "utf-8";
+@font-face {
+  font-family: JamsilT;
+  src: url(../webfonts/TheJamsilOTF1Thin.woff1\ Thin.woff) format("woff");
+}
+@font-face {
+  font-family: JamsilL;
+  src: url(../webfonts/TheJamsilOTF2Light.woff) format("woff");
+}
+@font-face {
+  font-family: JamsilR;
+  src: url(../webfonts/TheJamsilOTF3Regular.woff) format("woff");
+}
+@font-face {
+  font-family: JamsilM;
+  src: url(../webfonts/TheJamsilOTF4Medium.woff) format("woff");
+}
+@font-face {
+  font-family: JamsilB;
+  src: url(../webfonts/TheJamsilOTF5Bold.woff) format("woff");
+}
+@font-face {
+  font-family: JamsilEB;
+  src: url(../webfonts/TheJamsilOTF6ExtraBold.woff) format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  font: 16px JamsilL;
+}
+
+#wrap {
+  position: relative;
+  width: 100vw;
+  margin: 0 auto;
+}
+header {
+  width: 1200px;
+  margin: 0 auto;
+}
+.topMenu ul {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 17px;
+  margin-right: 10px;
+}
+.topMenu ul li {
+  width: 80px;
+  text-align: center;
+  margin-left: 20px;
+}
+.topMenu ul li:first-child a {
+  color: #f00;
+}
+.topMenu ul li:nth-child(2) a {
+  color: #4f4f4f;
+}
+.topMenu ul li:last-child a {
+  position: relative;
+  width: 100%;
+  height: 26px;
+  display: block;
+  top: -4px;
+  background: #f00;
+  border-radius: 6px;
+  font: 13px JamsilR;
+  line-height: 26px;
+  color: #fff;
+}
+.topMenu ul li img {
+  line-height: 26px;
+  vertical-align: middle;
+  padding-left: 3px;
+  padding-bottom: 2px;
+}
+.topScroll {
+  width: 1200px;
+  margin: 0 auto;
+}
+.menuScroll {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.top {
+  margin-top: 37px;
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  height: 60px;
+  justify-content: space-around;
+  position: relative;
+}
+.top::after {
+  position: absolute;
+  width: 1920px;
+  height: 85px;
+  background: #fff;
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -5;
+}
+.top .logo {
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top .search {
+  position: relative;
+  width: 570px;
+  height: 60px;
+  border: 3px solid #f00;
+  border-radius: 50px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top .search input {
+  width: 90%;
+  font-size: 20px;
+  padding: 5px;
+  border: none;
+}
+:focus {
+  outline: none;
+}
+.top .page {
+  width: 280px;
+  height: 60px;
+}
+.top .page ul {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.top .page ul li {
+  flex: 1 1 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+}
+.menu::after {
+  position: absolute;
+  width: 1920px;
+  height: 85px;
+  content: "";
+  background: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -5;
+}
+.menu > ul {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+.menu > ul > li {
+  position: relative;
+  flex: 1 1 10%;
+  font: 26px JamsilR;
+  background: #fff;
+  height: 60px;
+  line-height: 60px;
+}
+.menu > ul > li:first-child img {
+  margin-right: 13px;
+}
+.menu > ul > li:nth-child(5) {
+  font-size: 22px;
+  line-height: 60px;
+}
+.menu > ul > li:nth-child(7) img {
+  width: 106px;
+}
+.menu > ul > li .sub {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 60px;
+  overflow: hidden;
+  transition: height 0.5s;
+  background: #fff;
+  z-index: 2;
+}
+.menu > ul:hover .sub {
+  height: 360px;
+}
+.menu > ul > li a::before {
+  display: inline-block;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  content: "";
+  background: #f00;
+  width: 100%;
+  height: 4px;
+  transform: scale(0);
+  transition: transform 0.5s;
+  z-index: 3;
+}
+.menu > ul > li:hover a::before,
+.menu > ul > li a:hover::before {
+  transform: scale(1);
+}
+.menu > ul > li .sub li {
+  position: relative;
+  width: 100%;
+  font: 20px JamsilL;
+  color: #929292;
+  text-align: center;
+  margin: 20px 0;
+}
+.menu > ul > li .sub li::before {
+  position: absolute;
+  top: 0;
+  left: -2px;
+  width: 26px;
+  height: 26px;
+  content: "";
+  background-image: url(../images/menu_hover.png);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.menu > ul > li:nth-child(7) .sub li:nth-of-type(2):hover::before {
+  opacity: 0;
+}
+.menu > ul > li .sub li:hover {
+  color: #f00;
+}
+.menu > ul > li .sub li:hover::before {
+  opacity: 1;
+}
+.menu > ul > li ul img {
+  width: 106px;
+}
+nav {
+  width: 100%;
+  margin: 0 auto;
+}
+nav .title {
+  width: 100%;
+  font: 64px JamsilB;
+  text-align: center;
+  margin-top: 100px;
+}
+nav .subtitle {
+  font: 20px JamsilR;
+  color: #929292;
+  width: 100%;
+}
+.subtitle .sub {
+  width: 360px;
+  overflow: wrap;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+nav input {
+  display: block;
+  width: 500px;
+  height: 70px;
+  border-radius: 5px;
+  background: #d9d9d9;
+  border: none;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 20px auto 0;
+}
+nav input::placeholder {
+  font: 16px JamsilM;
+  color: #929292;
+}
+nav input:first-of-type {
+  margin-top: 40px;
+}
+nav input:last-of-type {
+  margin-top: 15px;
+}
+nav .service {
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  cursor: pointer;
+}
+nav .service li {
+  font: 16px JamsilL;
+}
+nav .service li::after {
+  content: "|";
+  margin-left: 35px;
+}
+nav .service li:last-child::after {
+  content: none;
+}
+.login {
+  display: block;
+  width: 500px;
+  height: 70px;
+  border-radius: 5px;
+  border: none;
+  background: #f00;
+  font: 20px JamsilM;
+  color: #fff;
+  text-align: center;
+  line-height: 70px;
+  margin: 0 auto;
+  margin-top: 70px;
+  cursor: pointer;
+}
+.login:hover,
+.phone:hover,
+.new:hover {
+  background: rgba(255, 0, 0, 0.8);
+  color: #fff;
+  font-size: 25px;
+  border: none;
+}
+.phone {
+  display: block;
+  width: 500px;
+  height: 70px;
+  border-radius: 5px;
+  border: 1px solid #f00;
+  background: #fff;
+  font: 20px JamsilM;
+  color: #f00;
+  text-align: center;
+  line-height: 70px;
+  margin: 10px auto;
+  cursor: pointer;
+}
+.new {
+  display: block;
+  width: 500px;
+  height: 70px;
+  border-radius: 5px;
+  border: 1px solid #929292;
+  background: #fff;
+  font: 20px JamsilM;
+  color: #929292;
+  text-align: center;
+  line-height: 70px;
+  margin: 10px auto;
+  cursor: pointer;
+}
+.simple {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 90px;
+}
+.simple p {
+  position: relative;
+  font: 16px JamsilL;
+  text-align: center;
+  background: #fff;
+}
+.simple p::after {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  width: 150px;
+  height: 2px;
+  background: #000;
+  z-index: 0;
+  box-shadow: 350px 0 0 0 #000;
+}
+.simple ul {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.simple li {
+  width: 60px;
+  height: 60px;
+  border: 1.5px solid #929292;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  cursor: pointer;
+}
+footer {
+  width: 100%;
+  height: 380px;
+  background: #f5f5f5;
+  margin-top: 250px;
+}
+.footMenu {
+  width: 1200px;
+  margin: 0 auto;
+}
+.footMenu .footList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 2px solid #929292;
+}
+.footMenu .footList li a {
+  font: 16px JamsilL;
+  color: #929292;
+}
+.footMenu .footList .left {
+  width: 290px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footMenu .footList .left li:last-child a {
+  font: 16px JamsilR;
+  color: #f00;
+}
+.footMenu .footList .right {
+  width: 460px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footMenu .footUnder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 30px;
+}
+.footMenu .footUnder .text ul li {
+  margin: 25px 0;
+}
+.footMenu .footUnder .text .bold {
+  font: 15px JamsilL;
+}
+.footMenu .footUnder .text .light {
+  font: 15px JamsilL;
+  color: #929292;
+}
+.footMenu .footUnder .text ul li span {
+  margin: 0 10px;
+}
+.footMenu .footUnder .sns {
+  padding-bottom: 230px;
+  box-sizing: border-box;
+}
+.footMenu .footUnder .sns ul {
+  width: 180px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

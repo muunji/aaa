@@ -1,0 +1,624 @@
+@charset "utf-8";
+@font-face {
+  font-family: SuiteL;
+  src: url(../webfonts/SUITE-Light.woff2) format("woff2");
+}
+@font-face {
+  font-family: SuiteM;
+  src: url(../webfonts/SUITE-Medium.woff2) format("woff2");
+}
+@font-face {
+  font-family: SuiteR;
+  src: url(../webfonts/SUITE-Regular.woff2) format("woff2");
+}
+@font-face {
+  font-family: SuiteSB;
+  src: url(../webfonts/SUITE-SemiBold.woff2) format("woff2");
+}
+@font-face {
+  font-family: SuiteB;
+  src: url(../webfonts/SUITE-Bold.woff2) format("woff2");
+}
+@font-face {
+  font-family: SuiteEB;
+  src: url(../webfonts/SUITE-ExtraBold.woff2) format("woff2");
+}
+@font-face {
+  font-family: SuiteH;
+  src: url(../webfonts/SUITE-Heavy.woff2) format("woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  font: 16px SuiteR;
+}
+
+header {
+  width: 100%;
+  margin: 0 auto;
+}
+.logo {
+  width: 173px;
+  margin: 0 auto;
+}
+.logo img {
+  width: 173px;
+  padding: 20px 0;
+}
+.scroll {
+  width: 100%;
+  height: 70px;
+  display: grid;
+  grid-template-columns: 1fr 6fr 2fr;
+  grid-template-rows: 1;
+  background: #fff;
+}
+.topScroll {
+  position: fixed;
+  top: 0;
+}
+.scroll .project {
+  grid-column: 1;
+}
+.scroll .menu {
+  position: relative;
+  grid-column: 2/7;
+  height: 100%;
+  height: 70px;
+}
+.scroll .menu > ul {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+.scroll .menu > ul li {
+  width: 120px;
+  font: 18px SuiteB;
+  line-height: 70px;
+  text-align: center;
+  color: #727272;
+  cursor: pointer;
+}
+.scroll .menu .sub {
+  height: 240px;
+  transition: all 0.5s;
+}
+.scroll .menu .sub li {
+  font: 16px SuiteSB;
+  line-height: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+.menuBg {
+  width: 100%;
+  height: 240px;
+  background: #bfb800;
+  transition: all 0.5s;
+}
+.bgScroll {
+  position: fixed;
+  top: 70px;
+  z-index: -1;
+}
+.scroll .info {
+  grid-column: 8/9;
+  margin-right: 20px;
+  line-height: 70px;
+}
+.scroll .info button,
+.scroll .info select {
+  font: 18px SuiteM;
+  padding: 5px 10px;
+  border: 0.5px solid #ccc;
+  border-radius: 5px;
+  color: #0072ce;
+}
+.scroll .info button {
+  background: #fff;
+  padding: 6px 15px;
+}
+.scroll .info p {
+  display: none;
+}
+nav {
+  position: absolute;
+  left: 0;
+  top: 150px;
+  width: 100%;
+  z-index: -2;
+}
+.visual {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 731px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.visual .slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.visual .slide li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 731px;
+}
+.visual .slide img {
+  width: 100%;
+}
+.visual .txt {
+  position: absolute;
+  left: 50%;
+  top: 200px;
+  transform: translateX(-50%);
+}
+.prod {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 410px;
+}
+.prod .pic {
+  width: 420px;
+  height: 420px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+}
+.prod .pic {
+  width: 420px;
+  height: 420px;
+  object-fit: cover;
+}
+.prod .prodPic {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  text-align: center;
+}
+.prod .prodPic li {
+  display: inline-block;
+}
+.prod .prodPic li a {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 0px 3px;
+  background: #fff;
+  border-radius: 50%;
+}
+.prod .prodPic a:hover,
+.prod .prodPic a.on {
+  background: #bfb800;
+}
+.prod .text {
+  position: absolute;
+  left: 58%;
+  top: -40px;
+  width: 250px;
+  height: 250px;
+  background: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.prod .text img {
+  width: 250px;
+  height: 250px;
+}
+.prodTxt {
+  display: none;
+}
+.projProd {
+  position: absolute;
+  top: 630px;
+  left: 250px;
+  width: 450px;
+  height: 200px;
+}
+.projProd .subBtn {
+  position: absolute;
+  right: 180px;
+  bottom: 10px;
+  text-align: center;
+}
+.projProd .subBtn li {
+  display: inline-block;
+}
+.projProd .subBtn li a {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: #727272;
+  border-radius: 6px;
+}
+.projProd .subBtn li a:hover {
+  background: #bfb800;
+}
+.subBtn li a.on {
+  background: #bfb800;
+  width: 25px;
+  transition: width 1s;
+}
+.center {
+  position: absolute;
+  right: 250px;
+  top: 720px;
+  width: 450px;
+  height: 100px;
+  text-align: right;
+}
+.center p {
+  font: 18px SuiteM;
+  margin-bottom: 20px;
+}
+.center input {
+  width: 250px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 5px 10px;
+}
+.center input::placeholder {
+  color: #fff;
+  font: 14px SuiteSB;
+}
+.center img {
+  position: absolute;
+  right: 10px;
+  top: 55px;
+}
+.banner {
+  position: relative;
+  width: 1280px;
+  height: 285px;
+  margin: 0 auto;
+  margin-top: 950px;
+}
+.banner .ban {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.banner .ban > ul {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner .ban > ul > li {
+  width: 100%;
+}
+.banner .ban img {
+  width: 95%;
+  object-fit: cover;
+  object-position: center;
+}
+.banner .banList {
+  text-align: center;
+}
+.banner .banList li:last-child {
+  margin-top: 20px;
+  font: 16px SuiteM;
+  color: #727272;
+}
+.controll {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.controll li {
+  cursor: pointer;
+}
+.controll li:last-child {
+  transform: rotate(180deg);
+}
+.content {
+  position: relative;
+  width: 1280px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 150px;
+  overflow: hidden;
+}
+.content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+.content:hover img {
+  transform: scale(1.1);
+}
+.content ul {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50px;
+}
+.content ul li {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  margin: 15px 0;
+}
+.content ul li:first-child {
+  font: 50px SuiteEB;
+}
+.content ul li:nth-child(2) {
+  font: 30px SuiteR;
+}
+.content ul li:last-child img {
+  width: 130px;
+  cursor: pointer;
+}
+footer {
+  position: absolute;
+  top: 2000px;
+  width: 100%;
+  background: #ccc;
+}
+footer .explain {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+footer .explain .line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .explain .line p {
+  color: #727272;
+  line-height: 30px;
+}
+footer .explain .line p::after {
+  content: "|";
+  margin: 0 10px;
+}
+footer .explain .line p:last-child::after {
+  content: none;
+}
+#mobile {
+  display: none;
+  width: 100%;
+  height: 100vh;
+}
+#mobile {
+  background: url(../images/mobile.jpg) no-repeat;
+  background-position: top;
+}
+#mobile .mobileLogo {
+  width: 100%;
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mobile.mobileLogo img {
+  width: 80%;
+  object-fit: cover;
+}
+#mobile .menu {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+#mobile .menu li {
+  width: 100%;
+  font: 20px SuiteB;
+  background: rgba(255, 255, 255, 0.8);
+  color: #bfb800;
+  margin: 15px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#mobile .menu li:hover {
+  background: rgba(191, 184, 0, 0.8);
+  color: #fff;
+}
+@media screen and (max-width: 1279px) {
+  .scroll .info button {
+    display: none;
+  }
+  .controll li img {
+    width: 80%;
+  }
+  .visual .txt {
+    top: 100px;
+  }
+  .visual .txt img {
+    width: 80%;
+    object-fit: cover;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .prod {
+    top: 250px;
+  }
+  .projProd {
+    left: 20px;
+  }
+  .center {
+    right: 20px;
+  }
+  .banner {
+    width: 100%;
+  }
+  .content {
+    width: 100%;
+  }
+
+  .controll li img {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .logo {
+    display: none;
+  }
+  .scroll .project img {
+    display: none;
+  }
+  .scroll .project {
+    background: url(../images/menu.png) no-repeat;
+    background-size: 40px;
+    background-position: center;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  .scroll .menu ul {
+    display: none;
+  }
+  .scroll .menu {
+    background: url(../images/brand_logo_scroll.png) no-repeat;
+
+    background-position: center;
+  }
+  .scroll .info select {
+    display: none;
+  }
+  .scroll .info p {
+    display: block;
+    color: #727272;
+  }
+  .menuBg {
+    display: none;
+  }
+  nav {
+    top: 70px;
+  }
+  footer .explain {
+    width: 100%;
+  }
+  .banner .banList li:last-child {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 779px) {
+  .projProd {
+    position: relative;
+    margin: 50px auto 0;
+  }
+  .center {
+    position: relative;
+    width: 100%;
+    margin-top: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .center input {
+    width: 90%;
+    margin-left: 40px;
+  }
+  .center img {
+    right: 30px;
+  }
+  .banner .ban > ul {
+    width: 300%;
+  }
+  .banner {
+    margin-top: 800px;
+  }
+  .content {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 639px) {
+  .visual .txt {
+    top: 50px;
+  }
+  .visual {
+    height: 500px;
+  }
+  .visual .slide li {
+    height: 500px;
+  }
+  .prod {
+    top: 150px;
+  }
+  .prod .pic {
+    width: 250px;
+    height: 250px;
+  }
+  .prod .pic img {
+    width: 250px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .prod .text {
+    width: 150px;
+    height: 150px;
+  }
+  .prod .text img {
+    width: 150px;
+    height: 150px;
+  }
+  .projProd {
+    top: 350px;
+  }
+  .center {
+    top: 450px;
+  }
+  .banner {
+    margin-top: 600px;
+  }
+  .banner .banList li:last-child {
+    font-size: 14px;
+  }
+  .content {
+    margin-top: 50px;
+  }
+  footer {
+    top: 1800px;
+  }
+  footer .explain .line {
+    display: block;
+    text-align: center;
+  }
+  footer .explain .line p {
+    line-height: 25px;
+  }
+  footer .explain .line p::after {
+    content: none;
+  }
+}
+@media screen and (max-width: 479px) {
+  #wrap {
+    display: none;
+  }
+  #mobile {
+    display: block;
+  }
+}

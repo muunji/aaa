@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lotte Sweet Mall</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/side.css" />
+    <link rel="stylesheet" href="css/recomProd.css" />
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/Pop.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div class="topMenu">
+          <ul>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="login.html">로그인</a></li>
+            <li>
+              <a href="#"
+                >롯데마트몰<img src="images/top_menu.png" alt="martmall"
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <!--topMenu-->
+      </header>
+      <div class="topScroll">
+        <div class="top">
+          <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="logo" /></a>
+          </div>
+          <div class="search">
+            <input
+              type="search"
+              placeholder="검색어를 입력해주세요"
+              autofocus
+            />
+            <img src="images/search.png" alt="search" />
+          </div>
+          <div class="page">
+            <ul>
+              <li>
+                <a href="#"><img src="images/mypage.png" alt="mypage" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/hope.png" alt="hope" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/cart.png" alt="cart" /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--top-->
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="category.html"
+                ><img src="images/category.png" alt="category" />카테고리</a
+              >
+              <ul class="sub">
+                <li>스낵</li>
+                <li>초콜릿</li>
+                <li>캔디/젤리</li>
+                <li>비스켓</li>
+                <li>시리얼</li>
+                <li>아이스크림</li>
+                <li>베이커리</li>
+                <li>선물세트</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">신상품</a>
+              <ul class="sub"></ul>
+            </li>
+            <li>
+              <a href="#">베스트</a>
+              <ul class="sub"></ul>
+            </li>
+            <li>
+              <a href="#">지금특가</a>
+              <ul class="sub"></ul>
+            </li>
+            <li>
+              <a href="#">이벤트/기획전</a>
+              <ul class="sub">
+                <li>이벤트</li>
+                <li>기획전</li>
+                <li>구독서비스</li>
+                <li>대량구매</li>
+                <li>선물하기</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">테마관</a>
+              <ul class="sub">
+                <li>브랜드관</li>
+                <li>캐릭터관</li>
+                <li>스위트tv</li>
+                <li>꿀조합레시피</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">상품추천</a>
+              <ul class="sub">
+                <li>Q.어떤 맛을<br />좋아하세요?</li>
+                <li><img src="images/icon_menu.png" alt="recom" /></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">고객센터</a>
+              <ul class="sub">
+                <li>고객센터</li>
+                <li>배송안내</li>
+                <li>Q&A</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!--menu-->
+      </div>
+      <!-- topScroll -->
+      <div id="slideShow" class="visual">
+        <ul class="slides">
+          <li><img src="images/visual1.png" alt="visual1" /></li>
+          <li><img src="images/visual2.png" alt="visual2" /></li>
+          <li><img src="images/visual3.png" alt="visual3" /></li>
+          <li><img src="images/visual4.png" alt="visual4" /></li>
+          <li><img src="images/visual5.png" alt="visual5" /></li>
+          <li><img src="images/visual6.png" alt="visual6" /></li>
+          <li><img src="images/visual7.png" alt="visual7" /></li>
+          <li><img src="images/visual8.png" alt="visual8" /></li>
+        </ul>
+        <ul class="controller">
+          <li class="prev"><img src="images/move_page.png" alt="prev" /></li>
+          <li class="next"><img src="images/move_page.png" alt="next" /></li>
+        </ul>
+        <ul class="page">
+          <li class="dot"></li>
+          <li class="dot"></li>
+          <li class="dot"></li>
+          <li class="dot"></li>
+          <li class="dot"></li>
+          <li class="dot"></li>
+          <li class="dot"></li>
+          <li class="dot"></li>
+        </ul>
+        <div class="listPop"></div>
+      </div>
+      <!--visual-->
+    </div>
+    <div class="recom">
+      <ul class="title">
+        <li>지금 추천</li>
+        <li>
+          <a href="#"><img src="images/move_page.png" alt="movePage" /></a>
+        </li>
+        <li>지금 즐길 수 있는 과자</li>
+      </ul>
+      <div class="recomProd">
+        <div
+          class="swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden"
+        >
+          <div
+            class="swiper-wrapper"
+            id="swiper-wrapper-22109d3a837f667a1"
+            aria-live="polite"
+            style="
+              transition-duration: 0ms;
+              transform: translate3d(0px, 0px, 0px);
+            "
+          >
+            <div
+              class="swiper-slide"
+              role="group"
+              aria-label="1/9"
+              style="width: 220px; margin-right: 20px"
+            >
+              <ul class="under">
+                <li>
+                  <a href="#"
+                    ><img src="images/recommand1.png" alt="recommand1"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><p>크런키 그래놀라 빼빼로 140g</p>
+                    <p>3,150원</p></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/recommand1.png" alt="recommand1"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="swiper-slide"
+              role="group"
+              aria-label="2/9"
+              style="width: 220px; margin: right 20px"
+            >
+              <ul class="under">
+                <li>
+                  <a href="#"
+                    ><img src="images/recommand2.png" alt="recomman2"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><p>딸기쿠키 230G (N)</p>
+                    <p>4,000원</p></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/recommand2.png" alt="recommand2"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="swiper-slide"
+              role="group"
+              aria-label="3/9"
+              style="width: 220px; margin-right: 20px"
+            >
+              <ul class="under">
+                <li>
+                  <a href="#"
+                    ><img src="images/recommand3.png" alt="recommand3"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><p>수박바 젤리 56g</p>
+                    <p>360원</p></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/recommand3.png" alt="recommand3"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="swiper-slide swiper-slide-prev"
+              role="group"
+              aria-label="4/9"
+              style="width: 220px; margin-right: 20px"
+            >
+              <ul class="under">
+                <li>
+                  <a href="#"
+                    ><img src="images/recommand4.png" alt="recommand4"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><p>냠냠연구소 2탄 과자집만들기</p>
+                    <p>14,900원</p></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/recommand4.png" alt="recommand4"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="swiper-slide swiper-slide-active"
+              role="group"
+              aria-label="5/9"
+              style="width: 220px; margin-right: 20px"
+            >
+              <ul class="under">
+                <li>
+                  <a href="#"
+                    ><img src="images/recommand5.png" alt="recommand5"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><p>찰떡아이스 하트딸기 90ml(잔망루피온팩)</p>
+                    <p>1,200원</p></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/recommand5.png" alt="recommand5"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="swiper-slide swiper-slide-next"
+              role="group"
+              aria-label="6/9"
+              style="width: 220px; margin-right: 20px"
+            >
+              <ul class="under">
+                <li>
+                  <a href="#"
+                    ><img src="images/recommand6.png" alt="recommand6"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><p>
+                      [나뚜루][무배] 녹딸바 SET(녹차파인트,딸기컵,바닐라 하드)
+                    </p>
+                    <p>16,900원</p></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/recommand6.png" alt="recommand6"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="swiper-slide"
+              role="group"
+              aria-label="7/9"
+              style="width: 220px; margin-right: 20px"
+            >
+              <ul class="under">
+                <li>
+                  <a href="#"
+                    ><img src="images/recommand7.png" alt="recommand7"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><p>키세스 아이코닉케이스 292g</p>
+                    <p>7,000원</p></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/recommand7.png" alt="recommand7"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="swiper-slide"
+              role="group"
+              aria-label="8/9"
+              style="width: 220px; margin-right: 20px"
+            >
+              <ul class="under">
+                <li>
+                  <a href="#"
+                    ><img src="images/recommand8.png" alt="recommand8"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><p>키세스 리본케이스 264g</p>
+                    <p>8,050원</p></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/recommand8.png" alt="recommand8"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="swiper-slide"
+              role="group"
+              aria-label="9/9"
+              style="width: 220px"
+            >
+              <ul class="under">
+                <li>
+                  <a href="#"
+                    ><img src="images/recommand9.png" alt="recommand9"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><p>[무배] 밀크비스킷 4개</p>
+                    <p>22,900원</p></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/recommand9.png" alt="recommand9"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-scrollbar"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <!--recomProd-->
+      <div class="sale">
+        <ul class="saleTitle">
+          <li>지금 특가</li>
+          <li>
+            <a href="#"><img src="images/move_page.png" alt="movePage" /></a>
+          </li>
+          <li>
+            <p>오늘 하루 특별한 가격으로 만나보세요</p>
+            <p>24시간 한정특가</p>
+          </li>
+          <li class="timer"></li>
+        </ul>
+        <div class="saleBox">
+          <ul class="saleProd">
+            <li>
+              <ul class="prod">
+                <li>
+                  <a href="#"><img src="images/sale1.png" alt="sale1" /></a>
+                </li>
+                <li><a href="#">[지금특가] 키세스 아이코닉케이스 292g</a></li>
+                <li>#허쉬 #초코 #초콜렛</li>
+                <li>
+                  7,000원 <span class="salePrice">12,500원</span
+                  ><span class="salePersent">44%</span>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/saleCart.png" alt="saleCart"
+                  /></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class="prod">
+                <li>
+                  <a href="#"><img src="images/sale2.png" alt="sale2" /></a>
+                </li>
+                <li><a href="#">[지금특가] 키세스 리본케이스 264g</a></li>
+                <li>#허쉬 #초코 #초콜렛</li>
+                <li>
+                  8,050원 <span class="salePrice">14,400원</span
+                  ><span class="salePersent">44%</span>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/saleCart.png" alt="saleCart"
+                  /></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class="prod">
+                <li>
+                  <a href="#"><img src="images/sale3.png" alt="sale3" /></a>
+                </li>
+                <li><a href="#">[지금특가] [무배] 밀크비스킷 4개</a></li>
+                <li>#선물</li>
+                <li>
+                  22,900원
+                  <span class="salePrice">35,200원</span
+                  ><span class="salePersent">35%</span>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/saleCart.png" alt="saleCart"
+                  /></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class="prod">
+                <li>
+                  <a href="#"><img src="images/sale4.png" alt="sale4" /></a>
+                </li>
+                <li><a href="#">몽쉘 카카오 12입 408G (리뉴얼)</a></li>
+                <li>#파이 #달콤한맛 #몽쉘 #생크림</li>
+                <li>
+                  5,280원 <span class="salePrice">6,600원</span
+                  ><span class="salePersent">20%</span>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/saleCart.png" alt="saleCart"
+                  /></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class="prod">
+                <li>
+                  <a href="#"><img src="images/sale5.png" alt="sale5" /></a>
+                </li>
+                <li><a href="#">몽쉘 오리지널 12입 408G (리뉴얼)</a></li>
+                <li>#파이 #달콤한맛 #몽쉘 #생크림</li>
+                <li>
+                  5,280원 <span class="salePrice">6,600원</span
+                  ><span class="salePersent">20%</span>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/saleCart.png" alt="saleCart"
+                  /></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class="prod">
+                <li>
+                  <a href="#"><img src="images/sale6.png" alt="sale6" /></a>
+                </li>
+                <li>
+                  <a href="#">롯데초코파이 오리지널 12입 408G (리뉴얼)</a>
+                </li>
+                <li>#파이 #달콤한맛 #몽쉘 #초콜렛</li>
+                <li>
+                  4,320원<span class="salePrice">5,400원</span
+                  ><span class="salePersent">20%</span>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/saleCart.png" alt="saleCart"
+                  /></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="left">
+          <img src="images/move.png" alt="left" />
+        </div>
+        <div class="right">
+          <img src="images/move.png" alt="right" />
+        </div>
+      </div>
+      <!--sale-->
+      <div class="banner">
+        <div class="banImg">
+          <img src="images/banner1.png" alt="banner1" />
+        </div>
+      </div>
+      <!--banner-->
+      <div class="rankProd">
+        <ul class="rankTitle">
+          <li>지금 순위</li>
+          <li>
+            <a href="#"><img src="images/move_page.png" alt="movePage" /></a>
+          </li>
+          <li>실시간 판매 순위! 지금 이순간 핫한 상품</li>
+        </ul>
+        <div class="rankSample">
+          <ul class="rankBox">
+            <li>
+              <ul class="prod">
+                <li>
+                  <a href="#"><img src="images/rank1.png" alt="rank1" /></a>
+                </li>
+                <li>
+                  <a href="#">[무료배송] 망그러진곰X드림카카오 (4입)</a>
+                </li>
+                <li>#드림카카오 #초코 #초콜렛</li>
+                <li>
+                  11,200원 <span class="salePrice">14,000원</span
+                  ><span class="salePersent">20%</span>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/saleCart.png" alt="saleCart"
+                  /></a>
+                </li>
+                <li><p>Best 01</p></li>
+              </ul>
+            </li>
+            <li>
+              <ul class="prod">
+                <li>
+                  <a href="#"><img src="images/rank2.png" alt="rank2" /></a>
+                </li>
+                <li>
+                  <a href="#">제로 기획팩 셋트</a>
+                </li>
+                <li>#세트</li>
+                <li>
+                  14,900원 <span class="salePrice"></span
+                  ><span class="salePersent"></span>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/saleCart.png" alt="saleCart"
+                  /></a>
+                </li>
+                <li><p>Best 02</p></li>
+              </ul>
+            </li>
+            <li>
+              <ul class="prod">
+                <li>
+                  <a href="#"><img src="images/rank3.png" alt="rank3" /></a>
+                </li>
+                <li>
+                  <a href="#">[PACK] 왓따 판박이 산리오 (25개입)</a>
+                </li>
+                <li>#왓따 #껌</li>
+                <li>
+                  12,500원 <span class="salePrice"></span
+                  ><span class="salePersent"></span>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/saleCart.png" alt="saleCart"
+                  /></a>
+                </li>
+                <li><p>Best 03</p></li>
+              </ul>
+            </li>
+            <li>
+              <ul class="prod">
+                <li>
+                  <a href="#"><img src="images/rank4.png" alt="rank4" /></a>
+                </li>
+                <li>
+                  <a href="#">마이멜로디 스위트팩 454g</a>
+                </li>
+                <li>#기획팩 #선물세트 #선물</li>
+                <li>
+                  7,120원 <span class="salePrice">8,900원</span
+                  ><span class="salePersent">20%</span>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/saleCart.png" alt="saleCart"
+                  /></a>
+                </li>
+                <li><p>Best 04</p></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="rankBox">
+            <li>
+              <ul class="prod">
+                <li>
+                  <a href="#"><img src="images/rank5.png" alt="rank5" /></a>
+                </li>
+                <li>
+                  <a href="#">녹차 빼빼로 132g</a>
+                </li>
+                <li>#빼빼로 #초코 #초콜렛</li>
+                <li>
+                  4,400원 <span class="salePrice">5,500원</span
+                  ><span class="salePersent">20%</span>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/saleCart.png" alt="saleCart"
+                  /></a>
+                </li>
+                <li><p>Best 05</p></li>
+              </ul>
+            </li>
+            <li>
+              <ul class="prod">
+                <li>
+                  <a href="#"><img src="images/rank6.png" alt="rank6" /></a>
+                </li>
+                <li>
+                  <a href="#">롯샌 제주녹차 벌크 302g</a>
+                </li>
+                <li>#롯데샌드 #비스킷 #쿠키</li>
+                <li>
+                  4,000원 <span class="salePrice">5,000</span
+                  ><span class="salePersent">20%</span>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/saleCart.png" alt="saleCart"
+                  /></a>
+                </li>
+                <li><p>Best 06</p></li>
+              </ul>
+            </li>
+            <li>
+              <ul class="prod">
+                <li>
+                  <a href="#"><img src="images/rank7.png" alt="rank7" /></a>
+                </li>
+                <li>
+                  <a href="#">[무배] 구구 크러스터 4개</a>
+                </li>
+                <li>#아이스크림</li>
+                <li>
+                  17,500원 <span class="salePrice">20,000</span
+                  ><span class="salePersent">13%</span>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/saleCart.png" alt="saleCart"
+                  /></a>
+                </li>
+                <li><p>Best 07</p></li>
+              </ul>
+            </li>
+            <li>
+              <ul class="prod">
+                <li>
+                  <a href="#"><img src="images/rank8.png" alt="rank8" /></a>
+                </li>
+                <li>
+                  <a href="#">[기획팩] 간식자판기 마니아 1462g</a>
+                </li>
+                <li>#기획팩 #선물세트 #선물</li>
+                <li>
+                  26,180원 <span class="salePrice">37,400원</span
+                  ><span class="salePersent">30%</span>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/saleCart.png" alt="saleCart"
+                  /></a>
+                </li>
+                <li><p>Best 08</p></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!--rankSample-->
+      </div>
+      <!--rankProd-->
+      <div class="banner2">
+        <div class="banImg">
+          <img src="images/banner2.png" alt="banner2" />
+        </div>
+      </div>
+      <!--banner2-->
+      <div class="sweetTv">
+        <ul class="tvTitle">
+          <li>스위트 tv</li>
+          <li>
+            <a href="#"><img src="images/move_page.png" alt="movePage" /></a>
+          </li>
+          <li>눈과 귀가 달콤해지는 스위트한 영상 모음</li>
+          <li><a href="#">유튜브 보러가기</a></li>
+        </ul>
+        <div class="tvBox">
+          <ul class="tvScreen">
+            <li>
+              <ul class="screen">
+                <li><img src="images/tv1.jpg" alt="tv1" /></li>
+                <li>
+                  <a href="#"><img src="images/play.png" alt="paly" /></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class="screen">
+                <li><img src="images/tv2.jpg" alt="tv2" /></li>
+                <li>
+                  <a href="#"><img src="images/play.png" alt="paly" /></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class="screen">
+                <li><img src="images/tv3.jpg" alt="tv3" /></li>
+                <li>
+                  <a href="#"><img src="images/play.png" alt="paly" /></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class="screen">
+                <li><img src="images/tv4.jpg" alt="tv4" /></li>
+                <li>
+                  <a href="#"><img src="images/play.png" alt="paly" /></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class="screen">
+                <li><img src="images/tv5.jpg" alt="tv5" /></li>
+                <li>
+                  <a href="#"><img src="images/play.png" alt="paly" /></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="tvback">
+          <ul class="tvBg">
+            <li><img src="images/tv_bg.png" alt="tvBg" /></li>
+            <li><img src="images/tv_bg2.png" alt="tvBg2" /></li>
+          </ul>
+        </div>
+        <div class="left">
+          <img src="images/move.png" alt="left" />
+        </div>
+        <div class="right">
+          <img src="images/move.png" alt="right" />
+        </div>
+      </div>
+      <!--sweetTv-->
+      <div class="insta">
+        <ul class="instaTitle">
+          <li>스윗타그램</li>
+          <li>
+            <a href="#"><img src="images/move_page.png" alt="movePage" /></a>
+          </li>
+          <li>@lotte-sweet-sta</li>
+        </ul>
+        <div class="board">
+          <ul>
+            <li>
+              <ul class="boardList">
+                <li>
+                  <a href="#"><img src="images/insta1.png" alt="insta1" /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/heart.png" alt="heart" /><img
+                      src="images/bubble.png"
+                      alt="bubble"
+                  /></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class="boardList">
+                <li>
+                  <a href="#"><img src="images/insta2.jpg" alt="insta2" /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/heart.png" alt="heart" /><img
+                      src="images/bubble.png"
+                      alt="bubble"
+                  /></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class="boardList">
+                <li>
+                  <a href="#"><img src="images/insta3.jpg" alt="insta3" /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/heart.png" alt="heart" /><img
+                      src="images/bubble.png"
+                      alt="bubble"
+                  /></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class="boardList">
+                <li>
+                  <a href="#"><img src="images/insta4.jpg" alt="insta4" /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/heart.png" alt="heart" /><img
+                      src="images/bubble.png"
+                      alt="bubble"
+                  /></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class="boardList">
+                <li>
+                  <a href="#"><img src="images/insta5.jpg" alt="insta5" /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/heart.png" alt="heart" /><img
+                      src="images/bubble.png"
+                      alt="bubble"
+                  /></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class="boardList">
+                <li>
+                  <a href="#"><img src="images/insta6.jpg" alt="insta6" /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/heart.png" alt="heart" /><img
+                      src="images/bubble.png"
+                      alt="bubble"
+                  /></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class="boardList">
+                <li>
+                  <a href="#"><img src="images/insta7.jpg" alt="insta7" /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/heart.png" alt="heart" /><img
+                      src="images/bubble.png"
+                      alt="bubble"
+                  /></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="left">
+          <img src="images/move.png" alt="left" />
+        </div>
+        <div class="right">
+          <img src="images/move.png" alt="right" />
+        </div>
+      </div>
+      <!--insta-->
+      <footer>
+        <div class="footMenu">
+          <div class="footList">
+            <ul class="left">
+              <li><a href="#">회사소개</a></li>
+              <li><a href="#">이용약관</a></li>
+              <li><a href="#">개인정보 처리방침</a></li>
+            </ul>
+            <ul class="right">
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">비회원 문의</a></li>
+              <li><a href="#">문의사항</a></li>
+              <li><a href="#">FAMILY SITE</a></li>
+            </ul>
+          </div>
+          <!-- footList -->
+          <div class="footUnder">
+            <div class="text">
+              <ul>
+                <li class="bold">
+                  롯데 스위트몰의 모든 콘텐츠는 저작권 보호를 받고 있습니다.
+                </li>
+                <li class="light">
+                  <ul>
+                    <li>
+                      롯데제과 (주)
+                      <span
+                        >주소 : 서울특별시 영등포구 양평로21길 10 (양평동가)
+                        롯데제과</span
+                      >
+                      <span
+                        >대표번호 : 1522-0071 평일 : 10:00 - 17:00 (주말,공휴일
+                        휴무)</span
+                      >
+                    </li>
+                    <li>
+                      사업자등록번호 : 186-81-00924
+                      <span>통신판매업 신고번호 : 2017-서울영등포-1471호</span>
+                    </li>
+                    <li>개인정보관리 책임자 : 김종기</li>
+                  </ul>
+                </li>
+                <li class="bold">KCP 구매안전서비스</li>
+                <li class="light">
+                  고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서
+                  가입한 구매안전 (에스크로) 서비스를 이용하실 수 있습니다.
+                </li>
+                <li class="light">
+                  Copyright LOTTE CONFECTIONERY Co.LTD.ALL rights reserved.
+                </li>
+              </ul>
+            </div>
+            <!-- text -->
+            <div class="sns">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img src="images/facebook.png" alt="facebook"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/naver.png" alt="naver" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/youtube.png" alt="youtube" /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="images/instagram.png" alt="instagram"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!--wrap : 100vw-->
+    <div class="popup">
+      <ul>
+        <li>
+          <ul class="scroll">
+            <li>
+              <a href="#"><img src="images/move.png" alt="up" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/move.png" alt="down" /></a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul class="up">
+            <li>
+              <a href="#"><img src="images/icon_popup.png" alt="popup" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/icon_popup2.png" alt="popup2" /></a>
+            </li>
+            <li><img src="images/popup_ani.png" alt="popup_ani" /></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--side popup-->
+    <div class="visualPop">
+      <div class="boxPop">
+        <div class="close">
+          <img src="images/close.png" alt="close" />
+        </div>
+        <div class="pop">
+          <div><img src="images/visual1.png" alt="visual1" /></div>
+          <div><img src="images/visual2.png" alt="visual2" /></div>
+          <div><img src="images/visual3.png" alt="visual3" /></div>
+          <div><img src="images/visual4.png" alt="visual4" /></div>
+          <div><img src="images/visual5.png" alt="visual5" /></div>
+          <div><img src="images/visual6.png" alt="visual6" /></div>
+          <div><img src="images/visual7.png" alt="visual7" /></div>
+          <div><img src="images/visual8.png" alt="visual8" /></div>
+        </div>
+      </div>
+    </div>
+    <script src="js/slide2.js"></script>
+    <!--slide javascript-->
+    <div class="side">
+      <div class="rank">
+        <ul class="name">
+          <li><a href="#">지금 추천</a></li>
+          <li><img src="images/next.png" alt="next" /></li>
+        </ul>
+        <div class="sample">
+          <div
+            class="swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden"
+          >
+            <div
+              class="swiper-wrapper"
+              id="swiper-wrapper-86296b3bbe45d44f"
+              aria-live="polite"
+            >
+              <div
+                class="swiper-slide swiper-slide-active"
+                role="group"
+                aria-label="1/9"
+                style="width: 160px"
+              >
+                <div class="box">
+                  <img src="images/recommand1.png" alt="recom1" />
+                </div>
+              </div>
+              <div
+                class="swiper-slide swiper-slide-next"
+                role="group"
+                aria-label="2/9"
+                style="width: 160px"
+              >
+                <div class="box">
+                  <img src="images/recommand2.png" alt="recom2" />
+                </div>
+              </div>
+              <div
+                class="swiper-slide"
+                role="group"
+                aria-label="3/9"
+                style="width: 160px"
+              >
+                <div class="box">
+                  <img src="images/recommand3.png" alt="recom3" />
+                </div>
+              </div>
+              <div
+                class="swiper-slide"
+                role="group"
+                aria-label="4/9"
+                style="width: 160px"
+              >
+                <div class="box">
+                  <img src="images/recommand4.png" alt="recom4" />
+                </div>
+              </div>
+              <div
+                class="swiper-slide"
+                role="group"
+                aria-label="5/9"
+                style="width: 160px"
+              >
+                <div class="box">
+                  <img src="images/recommand5.png" alt="recom5" />
+                </div>
+              </div>
+              <div
+                class="swiper-slide"
+                role="group"
+                aria-label="6/9"
+                style="width: 160px"
+              >
+                <div class="box">
+                  <img src="images/recommand6.png" alt="recom6" />
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiper-pagination swiper-pagination-progressbar swiper-pagination-horizontal"
+            >
+              <span
+                class="swiper-pagination-progressbar-fill"
+                style="
+                  transform: translate3d(0px, 0px, 0px) scaleX(0.111111)
+                    scaleY(1);
+                  transition-duration: 300ms;
+                "
+              ></span>
+            </div>
+            <span
+              class="swiper-notification"
+              aria-live="assertive"
+              aria-atomic="true"
+            ></span>
+          </div>
+          <!--swiper-->
+        </div>
+        <!--sample-->
+      </div>
+      <!--rank-->
+      <div class="rank">
+        <ul class="name">
+          <li><a href="#">지금 순위</a></li>
+          <li><img src="images/next.png" alt="next" /></li>
+        </ul>
+        <div class="sample">
+          <div
+            class="swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden"
+          >
+            <div
+              class="swiper-wrapper"
+              id="swiper-wrapper-86296b3bbe45d44f"
+              aria-live="polite"
+            >
+              <div
+                class="swiper-slide swiper-slide-active"
+                role="group"
+                aria-label="1/9"
+                style="width: 160px"
+              >
+                <div class="box">
+                  <img src="images/rank1.png" alt="rank1" />
+                </div>
+              </div>
+              <div
+                class="swiper-slide swiper-slide-next"
+                role="group"
+                aria-label="2/9"
+                style="width: 160px"
+              >
+                <div class="box">
+                  <img src="images/rank2.png" alt="rank2" />
+                </div>
+              </div>
+              <div
+                class="swiper-slide"
+                role="group"
+                aria-label="3/9"
+                style="width: 160px"
+              >
+                <div class="box">
+                  <img src="images/rank3.png" alt="rank3" />
+                </div>
+              </div>
+              <div
+                class="swiper-slide"
+                role="group"
+                aria-label="4/9"
+                style="width: 160px"
+              >
+                <div class="box">
+                  <img src="images/rank4.png" alt="rank4" />
+                </div>
+              </div>
+              <div
+                class="swiper-slide"
+                role="group"
+                aria-label="5/9"
+                style="width: 160px"
+              >
+                <div class="box">
+                  <img src="images/rank5.png" alt="rank5" />
+                </div>
+              </div>
+              <div
+                class="swiper-slide"
+                role="group"
+                aria-label="6/9"
+                style="width: 160px"
+              >
+                <div class="box">
+                  <img src="images/rank6.png" alt="rank6" />
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiper-pagination swiper-pagination-progressbar swiper-pagination-horizontal"
+            >
+              <span
+                class="swiper-pagination-progressbar-fill"
+                style="
+                  transform: translate3d(0px, 0px, 0px) scaleX(0.111111)
+                    scaleY(1);
+                  transition-duration: 300ms;
+                "
+              ></span>
+            </div>
+            <span
+              class="swiper-notification"
+              aria-live="assertive"
+              aria-atomic="true"
+            ></span>
+          </div>
+          <!--swiper-->
+        </div>
+        <!--sample-->
+      </div>
+      <!--rank-->
+      <div class="prod">
+        <ul class="name">
+          <li><a href="#">상품 추천</a></li>
+          <li><img src="images/next.png" alt="next" /></li>
+        </ul>
+        <ul class="bubble">
+          <li><img src="images/racBubble.png" alt="racBubble" /></li>
+          <li><img src="images/icon_menu.png" alt="icon_menu" /></li>
+        </ul>
+      </div>
+      <!--prod-->
+      <div class="character">
+        <ul class="name">
+          <li><a href="#">캐릭터관</a></li>
+          <li><img src="images/next.png" alt="next" /></li>
+        </ul>
+      </div>
+      <!--character-->
+      <div class="recipe">
+        <ul class="name">
+          <li><a href="#">꿀조함레시피</a></li>
+          <li><img src="images/next.png" alt="next" /></li>
+        </ul>
+      </div>
+      <!--recipe-->
+      <div class="monthly">
+        <ul>
+          <li><img src="images/monthly.png" alt="monthly" /></li>
+          <li><a href="#">월간 구독</a></li>
+          <li><img src="images/next.png" alt="next" /></li>
+        </ul>
+      </div>
+      <!--monthly-->
+      <div class="foodmall">
+        <ul>
+          <li>
+            <a href="#">푸드몰<br />바로가기</a>
+          </li>
+          <li><img src="images/next.png" alt="next" /></li>
+        </ul>
+        <div><img src="images/foodmall.png" alt="foodmall" /></div>
+      </div>
+    </div>
+    <!--side-->
+    <!-- side javascript -->
+    <script src="js/Popup.js"></script>
+    <script src="js/swiper.js"></script>
+  </body>
+</html>

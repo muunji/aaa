@@ -1,0 +1,578 @@
+@charset "utf-8";
+@font-face {
+  font-family: JamsilT;
+  src: url(../webfonts/TheJamsilOTF1Thin.woff1\ Thin.woff) format("woff");
+}
+@font-face {
+  font-family: JamsilL;
+  src: url(../webfonts/TheJamsilOTF2Light.woff) format("woff");
+}
+@font-face {
+  font-family: JamsilR;
+  src: url(../webfonts/TheJamsilOTF3Regular.woff) format("woff");
+}
+@font-face {
+  font-family: JamsilM;
+  src: url(../webfonts/TheJamsilOTF4Medium.woff) format("woff");
+}
+@font-face {
+  font-family: JamsilB;
+  src: url(../webfonts/TheJamsilOTF5Bold.woff) format("woff");
+}
+@font-face {
+  font-family: JamsilEB;
+  src: url(../webfonts/TheJamsilOTF6ExtraBold.woff) format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  font: 16px JamsilL;
+}
+
+#wrap {
+  position: relative;
+  width: 100vw;
+  margin: 0 auto;
+}
+header {
+  width: 1200px;
+  margin: 0 auto;
+}
+.topMenu ul {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 17px;
+  margin-right: 10px;
+}
+.topMenu ul li {
+  width: 80px;
+  text-align: center;
+  margin-left: 20px;
+}
+.topMenu ul li:first-child a {
+  color: #f00;
+}
+.topMenu ul li:nth-child(2) a {
+  color: #4f4f4f;
+}
+.topMenu ul li:last-child a {
+  position: relative;
+  width: 100%;
+  height: 26px;
+  display: block;
+  top: -4px;
+  background: #f00;
+  border-radius: 6px;
+  font: 13px JamsilR;
+  line-height: 26px;
+  color: #fff;
+}
+.topMenu ul li img {
+  line-height: 26px;
+  vertical-align: middle;
+  padding-left: 3px;
+  padding-bottom: 2px;
+}
+.topScroll {
+  width: 1200px;
+  margin: 0 auto;
+}
+.menuScroll {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.top {
+  margin-top: 37px;
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  height: 60px;
+  justify-content: space-around;
+  position: relative;
+}
+.top::after {
+  position: absolute;
+  width: 1920px;
+  height: 85px;
+  background: #fff;
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -5;
+}
+.top .logo {
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top .search {
+  position: relative;
+  width: 570px;
+  height: 60px;
+  border: 3px solid #f00;
+  border-radius: 50px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top .search input {
+  width: 90%;
+  font-size: 20px;
+  padding: 5px;
+  border: none;
+}
+:focus {
+  outline: none;
+}
+.top .page {
+  width: 280px;
+  height: 60px;
+}
+.top .page ul {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.top .page ul li {
+  flex: 1 1 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+}
+.menu::after {
+  position: absolute;
+  width: 1920px;
+  height: 85px;
+  content: "";
+  background: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -5;
+}
+.menu > ul {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+.menu > ul > li {
+  position: relative;
+  flex: 1 1 10%;
+  font: 26px JamsilR;
+  background: #fff;
+  height: 60px;
+  line-height: 60px;
+}
+.menu > ul > li:first-child img {
+  margin-right: 13px;
+}
+.menu > ul > li:nth-child(5) {
+  font-size: 22px;
+  line-height: 60px;
+}
+.menu > ul > li:nth-child(7) img {
+  width: 106px;
+}
+.menu > ul > li .sub {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 60px;
+  overflow: hidden;
+  transition: height 0.5s;
+  background: #fff;
+  z-index: 2;
+}
+.menu > ul:hover .sub {
+  height: 360px;
+}
+.menu > ul > li a::before {
+  display: inline-block;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  content: "";
+  background: #f00;
+  width: 100%;
+  height: 4px;
+  transform: scale(0);
+  transition: transform 0.5s;
+  z-index: 3;
+}
+.menu > ul > li:hover a::before,
+.menu > ul > li a:hover::before {
+  transform: scale(1);
+}
+.menu > ul > li .sub li {
+  position: relative;
+  width: 100%;
+  font: 20px JamsilL;
+  color: #929292;
+  text-align: center;
+  margin: 20px 0;
+}
+.menu > ul > li .sub li::before {
+  position: absolute;
+  top: 0;
+  left: -2px;
+  width: 26px;
+  height: 26px;
+  content: "";
+  background-image: url(../images/menu_hover.png);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.menu > ul > li:nth-child(7) .sub li:nth-of-type(2):hover::before {
+  opacity: 0;
+}
+.menu > ul > li .sub li:hover {
+  color: #f00;
+}
+.menu > ul > li .sub li:hover::before {
+  opacity: 1;
+}
+.menu > ul > li ul img {
+  width: 106px;
+}
+nav {
+  width: 1200px;
+  height: 2625px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+nav .left {
+  float: left;
+}
+.left p {
+  font: 30px JamsilM;
+  padding: 10px 0;
+  border-bottom: 3px solid #000;
+}
+.left > ul li {
+  position: relative;
+  /* height: 80px; */
+}
+.left > ul li a {
+  font: 24px JamsilR;
+  line-height: 80px;
+}
+.left .arrow {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  cursor: pointer;
+}
+.left .cateSub {
+  font: 20px JamsilL;
+  color: #929292;
+  margin-left: 20px;
+}
+.left .cateSub li {
+  position: relative;
+  height: 40px;
+  cursor: pointer;
+}
+.left .cateSub li:hover {
+  color: #000;
+}
+.left .cateSub li:hover::after {
+  position: absolute;
+  left: -5px;
+  bottom: 35px;
+  content: "";
+  background: #f00;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+nav .right {
+  float: right;
+}
+.right p {
+  font: 20px JamsilR;
+  color: #d9d9d9;
+  margin: 20px 0;
+}
+.right p span {
+  color: #000;
+}
+.right > div {
+  margin: 20px 0;
+}
+.right .brand p {
+  font: 24px JamsilR;
+  color: #000;
+}
+.right .brandList {
+  width: 880px;
+  overflow: hidden;
+}
+.right .brand ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 170%;
+  cursor: pointer;
+}
+.allProd > p {
+  font: 24px JamsilR;
+  color: #000;
+  margin-top: 100px;
+}
+.allProd .btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: first baseline;
+}
+.allProd .btn button {
+  position: relative;
+  font: 20px JamsilT;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+  background: #fff;
+  cursor: pointer;
+}
+.allProd .btn .filter {
+  width: 100%;
+}
+.allProd .btn .filter > ul {
+  margin-top: 30px;
+}
+.allProd .btn > ul li {
+  display: flex;
+}
+.allProd .btn .check {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #000;
+}
+.allProd .filter ul li:first-child .check {
+  border-top: 2px solid #000;
+}
+.allProd .filter ul li:last-child .check {
+  border-bottom: 2px solid #000;
+}
+.allProd .btn .check li {
+  position: relative;
+  width: 65px;
+  font: 16px JamsilL;
+  color: #929292;
+  padding-left: 20px;
+  cursor: pointer;
+}
+.allProd .btn .check li:hover {
+  color: #000;
+}
+.allProd .btn .check li::after {
+  position: absolute;
+  left: 0px;
+  top: 0;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url(../images/check.png) no-repeat;
+  background-size: 16px;
+}
+.allProd .btn .check p {
+  display: inline;
+  width: 50px;
+  font: 20px JamsilR;
+  color: #000;
+}
+.allProd .btn select {
+  font: 20px JamsilT;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+  padding-right: 30px;
+  background: #fff;
+  cursor: pointer;
+}
+.prodSample .box {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.box .sample {
+  position: relative;
+}
+.box .sample li:first-child {
+  width: 280px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+.box .sample:hover li:first-child {
+  background: rgba(92, 92, 92, 0.4);
+}
+.box .sample li:first-child img {
+  width: 278px;
+}
+.box .sample li:nth-child(2) {
+  font: 16px JamsilR;
+  margin-top: 20px;
+}
+.box .sample li:nth-child(3) {
+  font: 12px JamsilL;
+  color: #929292;
+  margin-top: 4px;
+}
+.box .sample li:nth-child(4) {
+  font: 19px JamsilM;
+  margin-top: 4px;
+  color: #000;
+}
+.box .sample li:nth-child(4) .salePrice {
+  font: 13px JamsilR;
+  color: #929292;
+  text-decoration: line-through;
+  margin-left: 5px;
+}
+.box .sample li:nth-child(4) .salePersent {
+  font: 16px JamsilR;
+  color: #f00;
+  margin-left: 5px;
+}
+.box .sample li:nth-child(5) {
+  position: absolute;
+  right: 10px;
+  bottom: 85px;
+}
+.btn2 {
+  width: 100%;
+}
+.btn2 ul {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+.btn2 ul li {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.btn2 ul li:nth-child(2),
+.btn2 ul li:nth-child(3),
+.btn2 ul li:nth-child(4) {
+  border-radius: 50%;
+  font: 24px JamsilR;
+  text-align: center;
+  line-height: 40px;
+}
+.btn2 ul li:last-child {
+  transform: rotate(180deg);
+}
+.btn2 ul li:nth-child(2):hover,
+.btn2 ul li:nth-child(3):hover,
+.btn2 ul li:nth-child(4):hover {
+  color: #fff;
+  background: #f00;
+}
+footer {
+  width: 100%;
+  height: 380px;
+  margin-top: 50px;
+  background: #f5f5f5;
+}
+.footMenu {
+  width: 1200px;
+  margin: 0 auto;
+}
+.footMenu .footList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 2px solid #929292;
+}
+.footMenu .footList li a {
+  font: 16px JamsilL;
+  color: #929292;
+}
+.footMenu .footList .left {
+  width: 290px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footMenu .footList .left li:last-child a {
+  font: 16px JamsilR;
+  color: #f00;
+}
+.footMenu .footList .right {
+  width: 460px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footMenu .footUnder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 30px;
+}
+.footMenu .footUnder .text ul li {
+  margin: 25px 0;
+}
+.footMenu .footUnder .text .bold {
+  font: 15px JamsilL;
+}
+.footMenu .footUnder .text .light {
+  font: 15px JamsilL;
+  color: #929292;
+}
+.footMenu .footUnder .text ul li span {
+  margin: 0 10px;
+}
+.footMenu .footUnder .sns {
+  padding-bottom: 230px;
+  box-sizing: border-box;
+}
+.footMenu .footUnder .sns ul {
+  width: 180px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
